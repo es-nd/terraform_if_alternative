@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  default:
+    image: hashicorp/terraform:1.3.6
+    container_name: default
+    working_dir: /workspace
+    environment:
+      - GOOGLE_APPLICATION_CREDENTIALS=/workspace/credential.json
+    volumes:
+      - ./:/workspace
